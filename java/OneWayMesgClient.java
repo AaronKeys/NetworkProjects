@@ -1,7 +1,7 @@
 /*
  * Author: Aaron L. Keys
  * Last Modified: 18 Sept 2023
- * Implementation of the one-way message client in java
+ * Implementation of the two-way message client in java
  */
 
 // Package for I/O related stuff
