@@ -1,4 +1,4 @@
-# These instructions are for running OneWayMesg application written in java
+# These instructions are for running OneWayMesg, which has become a two way message application written in java
 
 # Compile the client and server programs
 % javac OneWayMesgServer.java
