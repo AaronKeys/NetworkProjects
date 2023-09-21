@@ -1,7 +1,7 @@
 /*
  * Author: Aaron L. Keys
  * Last Modified: 18 Sept 2023
- * Implementation of a one-way message server in java
+ * Implementation of a two-way message server in java
  */
 
 // Package for I/O related stuff
@@ -43,9 +43,6 @@ public class OneWayMesgServer {
 					((InetSocketAddress) clientSock.getRemoteSocketAddress()).getPort()
 					+ "')");
 
-			// No other clients, close the server socket
-			// serverSock.close();
-
 			// Prepare to read from client
 			BufferedReader fromClientReader = new BufferedReader(
 					new InputStreamReader(clientSock.getInputStream()));
@@ -83,8 +80,7 @@ public class OneWayMesgServer {
 				toClientWriter.println("Server: " + ln);
 
 			}
-			// close the writer, serversocket, and exit.
-			// toClientWriter.close();
+			// close the serversocket, and exit.
 			serverSock.close();
 			clientSock.close();
 		} catch (Exception e) {
